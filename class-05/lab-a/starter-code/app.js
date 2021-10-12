@@ -97,12 +97,26 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
+let a=sumArr[0]
+let b=sumArr[1]
+let c=sumArr[2]
+
+  let ab1 = sum(a,b)  // a+b -> 10
+// console.log(ab1) // array ab[0] =  [10:answer, txt]
+  let abc1 = sum(ab1[0],c)
+  // console.log(abc1[0])  //array abc1 = [15:answer, txt]
+  //                                      0       1
+  let message = `${a},${b},${c} was passed in as an array of numbers, and ${abc1[0]} is their sum.`
+  // console.log(message)
+  return [ abc1[0], message]
+
+
 
 }
-
+// sumArray([1,2,3]);
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
